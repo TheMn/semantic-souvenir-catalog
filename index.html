@@ -5,6 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Travel Souvenirs</title>
     <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": {
+        "schema": "http://schema.org/",
+        "my": "https://themn.github.io/semantic-souvenir-catalog/vocabulary.ttl#"
+      },
+      "@graph": [
+        {
+          "@id": "https://themn.github.io/semantic-souvenir-catalog/#souvenir1",
+          "@type": ["schema:Product", "my:Souvenir"],
+          "schema:name": "Eiffel Tower Keychain",
+          "schema:image": "https://themn.github.io/semantic-souvenir-catalog/photos/paris.jpg",
+          "my:boughtInCity": "Paris",
+          "my:tripYear": 2021
+        },
+        {
+          "@id": "https://themn.github.io/semantic-souvenir-catalog/#souvenir2",
+          "@type": ["schema:Product", "my:Souvenir"],
+          "schema:name": "I <3 NY T-Shirt",
+          "schema:image": "https://themn.github.io/semantic-souvenir-catalog/photos/new_york.jpg",
+          "my:boughtInCity": "New York",
+          "my:tripYear": 2019
+        },
+        {
+          "@id": "https://themn.github.io/semantic-souvenir-catalog/#souvenir3",
+          "@type": ["schema:Product", "my:Souvenir"],
+          "schema:name": "Wooden Clogs",
+          "schema:image": "https://themn.github.io/semantic-souvenir-catalog/photos/amsterdam.jpg",
+          "my:boughtInCity": "Amsterdam",
+          "my:tripYear": 2023
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <h1>My Travel Souvenirs</h1>
