@@ -2,8 +2,27 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix schema: <http://schema.org/> .
-@prefix my: <http://example.org/vocabulary.ttl#> .
+@prefix my: <https://themn.github.io/semantic-souvenir-catalog/vocabulary.ttl#> .
 
 # My Travel Souvenirs Vocabulary (T-Box)
 # This file defines the custom terms for the project.
 # It does NOT contain instance data.
+
+# Class Definition
+my:Souvenir a rdfs:Class ;
+    rdfs:label "Souvenir" ;
+    rdfs:comment "A memento bought during a trip." ;
+    rdfs:subClassOf schema:Product .
+
+# Property Definitions
+my:boughtInCity a rdf:Property ;
+    rdfs:label "boughtInCity" ;
+    rdfs:comment "The city where the souvenir was purchased." ;
+    rdfs:domain my:Souvenir ;
+    rdfs:range schema:Text .
+
+my:tripYear a rdf:Property ;
+    rdfs:label "tripYear" ;
+    rdfs:comment "The year the trip took place." ;
+    rdfs:domain my:Souvenir ;
+    rdfs:range schema:Integer .
