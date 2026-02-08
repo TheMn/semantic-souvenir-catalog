@@ -1,0 +1,10 @@
+# Query to select all souvenirs bought in 'Paris'
+PREFIX schema: <http://schema.org/>
+PREFIX my: <https://themn.github.io/semantic-souvenir-catalog/vocabulary.ttl#>
+
+SELECT ?souvenir ?name
+WHERE {
+  ?souvenir a my:Souvenir ;
+            my:boughtInCity "Paris" ;
+            schema:name ?name .
+}
