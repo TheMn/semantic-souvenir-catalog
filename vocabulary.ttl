@@ -12,7 +12,7 @@
 my:Souvenir a rdfs:Class ;
     rdfs:label "Souvenir" ;
     rdfs:comment "A memento bought during a trip." ;
-    rdfs:subClassOf schema:Product .
+    rdfs:subClassOf schema:CreativeWork .
 
 # Property Definitions
 my:boughtInCity a rdf:Property ;
