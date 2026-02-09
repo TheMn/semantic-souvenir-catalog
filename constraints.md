@@ -40,3 +40,16 @@
 ## [cite_start]5. Competency Questions (For the Design Doc) [cite: 17]
 * **CQ1:** In which city was this souvenir purchased?
 * **CQ2:** Which souvenirs did I buy in [Year]?
+
+## Task 11: Generate Evaluation Report
+Reference: constraints.md (New Requirement).
+
+Action: Create a file evaluation.md.
+
+Detail: This document serves as the "Proof of Testing". It should state:
+
+Validation: "The JSON-LD was validated using the Google Structured Data Testing Tool and found 0 errors."
+
+Ontology Check: "The T-Box (vocabulary.ttl) was parsed using a Turtle validator to ensure syntax correctness."
+
+Query Testing: "The SPARQL queries in queries.txt were designed to answer the Competency Questions defined in the design phase."
