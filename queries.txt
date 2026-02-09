@@ -31,7 +31,7 @@ SELECT ?souvenir ?name
 WHERE {
   ?souvenir a my:Souvenir ;
             schema:name ?name ;
-            schema:category "Clothing" .
+            schema:genre "Clothing" .
 }
 
 # Query to select name and city of souvenirs bought by "Alice"

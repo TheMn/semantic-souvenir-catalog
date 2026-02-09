@@ -29,7 +29,7 @@ The following SPARQL queries (see `queries.txt`) were executed to verify the Dat
     * *Result:* Correctly retrieves items bought in recent years (e.g., Persian Rug (2025), Venetian Mask (2023), Eiffel Tower Keychain (2021), Wooden Clogs (2023), Dirndl or Lederhosen Hat (2024), Silk Scarf (2021)).
 
 * **CQ3: Select all souvenirs that are "Clothing"**
-    * *Query:* Filters `schema:category` by "Clothing".
+    * *Query:* Filters `schema:genre` by "Clothing".
     * *Result:* Retrieves "I <3 NY T-Shirt", "Dirndl or Lederhosen Hat", "Silk Scarf".
 
 * **CQ4: Select name and city of souvenirs bought by "Alice"**
