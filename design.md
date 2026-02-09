@@ -16,13 +16,13 @@
            *   `my:buyer`: Object property pointing to `schema:Person`. The person who bought the item.
 
    *   **Standard Properties:**
-       *   `schema:category`: Used to define the type of object (e.g., Keychain, Clothing).
+       *   `schema:genre`: Used to define the category/type of the artifact (e.g., Keychain, Clothing), as category is not a valid property for CreativeWork.
 
 4. **Competency Questions:**
 
    List of questions our queries answer:
    *   What souvenirs were purchased in a specific city? (e.g., "Paris")
    *   Which souvenirs were purchased in a specific year or time period? (e.g., "after 2020")
-   *   What souvenirs belong to a specific category? (e.g., "Clothing")
+   *   What souvenirs belong to a specific genre? (e.g., "Clothing")
    *   What items were purchased by a specific buyer? (e.g., "Alice")
    *   In which city was a specific souvenir purchased?
