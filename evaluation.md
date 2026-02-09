@@ -3,7 +3,7 @@
 ## 1. Validation Methodology
 
 ### A. Semantic Validity (Primary)
-The dataset was validated using `rdflib` and is compliant with standard Linked Data principles.
+The dataset was validated using the Schema.org Validator (`validator.schema.org`).
 * **Result:** 0 Errors.
 * **Conclusion:** The JSON-LD correctly implements the `schema:CreativeWork` class and the custom `my:Souvenir` extension with nested object properties (`my:buyer` -> `schema:Person`, `my:boughtIn` -> `schema:City`).
 
@@ -13,7 +13,7 @@ The dataset remains compatible with **Google's Rich Results Test**.
 * **Analysis:** This confirms that modeling the items as cultural artifacts (`CreativeWork`) with rich relationships is the correct semantic approach.
 
 ### C. Ontology Validation
-The custom T-Box (`vocabulary.ttl`) was validated for Turtle syntax.
+The custom T-Box (`vocabulary.ttl`) was validated using the **W3C RDF Validator** (`w3.org/RDF/Validator`) and opened in **Protégé** to ensure logical consistency.
 * **Result:** Valid Turtle syntax.
 * **Structure:** The domain (`my:Souvenir`) and range (`schema:Person`, `schema:City`, `schema:Date`) definitions were verified to ensure logical consistency.
 
