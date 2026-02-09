@@ -21,3 +21,16 @@ p {
     object-fit: cover;
     border-radius: 8px;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    vertical-align: top;
+    text-align: center;
+}
