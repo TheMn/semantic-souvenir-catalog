@@ -22,7 +22,7 @@ The following SPARQL queries (see `queries.txt`) were executed to verify the Dat
 
 * **CQ1: Which items were bought after a certain year?**
     * *Query:* Filters `my:tripYear > 2020`.
-    * *Result:* Correctly retrieves items bought in recent years (e.g., Eiffel Tower Keychain).
+    * *Result:* Correctly retrieves items bought in recent years (e.g., Persian Rug (2025), Venetian Mask (2023), Eiffel Tower Keychain).
 
 * **CQ2: Can we categorize souvenirs by type?**
     * *Query:* Filters by `my:souvenirCategory`.
