@@ -20,14 +20,18 @@ The custom T-Box (`vocabulary.ttl`) was validated using the **W3C RDF Validator*
 ## 2. Query Testing & Competency Questions
 The following SPARQL queries (see `queries.txt`) were executed to verify the Data Model answers the project's requirements:
 
-* **CQ1: Which items were bought after a certain year?**
+* **CQ1: Select all souvenirs bought in 'Paris'**
+    * *Query:* Filters `my:boughtInCity` by "Paris".
+    * *Result:* Retrieves "Eiffel Tower Keychain".
+
+* **CQ2: Select all souvenirs bought after 2020**
     * *Query:* Filters `my:tripYear > 2020`.
-    * *Result:* Correctly retrieves items bought in recent years (e.g., Persian Rug (2025), Venetian Mask (2023), Eiffel Tower Keychain).
+    * *Result:* Correctly retrieves items bought in recent years (e.g., Persian Rug (2025), Venetian Mask (2023), Eiffel Tower Keychain (2021), Wooden Clogs (2023), Dirndl or Lederhosen Hat (2024), Silk Scarf (2021)).
 
-* **CQ2: Can we categorize souvenirs by type?**
-    * *Query:* Filters by `my:souvenirCategory`.
-    * *Result:* Searching for "Clothing" isolates the "I <3 NY T-Shirt".
+* **CQ3: Select all souvenirs that are "Clothing"**
+    * *Query:* Filters `my:souvenirCategory` by "Clothing".
+    * *Result:* Retrieves "I <3 NY T-Shirt", "Dirndl or Lederhosen Hat", "Silk Scarf".
 
-* **CQ3: Who bought which items?**
-    * *Query:* Groups items by `my:buyerName`.
-    * *Result:* Successfully aggregates the collection by buyer, fulfilling the multi-user expansion requirement.
+* **CQ4: Select name and city of souvenirs bought by "Alice"**
+    * *Query:* Filters `my:buyerName` by "Alice" and selects name and city.
+    * *Result:* Retrieves "Persian Rug" (Tabriz), "Eiffel Tower Keychain" (Paris), "Wooden Clogs" (Amsterdam).
