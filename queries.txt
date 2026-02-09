@@ -8,3 +8,38 @@ WHERE {
             my:boughtInCity "Paris" ;
             schema:name ?name .
 }
+
+# Query to select all souvenirs bought after 2020
+PREFIX schema: <http://schema.org/>
+PREFIX my: <https://themn.github.io/semantic-souvenir-catalog/vocabulary.ttl#>
+
+SELECT ?souvenir ?name
+WHERE {
+  ?souvenir a my:Souvenir ;
+            schema:name ?name ;
+            my:tripYear ?year .
+  FILTER (?year > 2020)
+}
+
+# Query to select all souvenirs that are "Clothing"
+PREFIX schema: <http://schema.org/>
+PREFIX my: <https://themn.github.io/semantic-souvenir-catalog/vocabulary.ttl#>
+
+SELECT ?souvenir ?name
+WHERE {
+  ?souvenir a my:Souvenir ;
+            schema:name ?name ;
+            my:souvenirCategory "Clothing" .
+}
+
+# Query to select name and city of souvenirs bought by "Alice"
+PREFIX schema: <http://schema.org/>
+PREFIX my: <https://themn.github.io/semantic-souvenir-catalog/vocabulary.ttl#>
+
+SELECT ?souvenir ?name ?city
+WHERE {
+  ?souvenir a my:Souvenir ;
+            schema:name ?name ;
+            my:buyerName "Alice" ;
+            my:boughtInCity ?city .
+}
