@@ -5,20 +5,22 @@ PREFIX my: <https://themn.github.io/semantic-souvenir-catalog/vocabulary.ttl#>
 SELECT ?souvenir ?name
 WHERE {
   ?souvenir a my:Souvenir ;
-            my:boughtInCity "Paris" ;
-            schema:name ?name .
+            schema:name ?name ;
+            my:boughtIn ?cityNode .
+  ?cityNode schema:name "Paris" .
 }
 
 # Query to select all souvenirs bought after 2020
 PREFIX schema: <http://schema.org/>
 PREFIX my: <https://themn.github.io/semantic-souvenir-catalog/vocabulary.ttl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?souvenir ?name
 WHERE {
   ?souvenir a my:Souvenir ;
             schema:name ?name ;
-            my:tripYear ?year .
-  FILTER (?year > 2020)
+            my:tripDate ?date .
+  FILTER (?date > "2020-12-31"^^xsd:date)
 }
 
 # Query to select all souvenirs that are "Clothing"
@@ -29,7 +31,7 @@ SELECT ?souvenir ?name
 WHERE {
   ?souvenir a my:Souvenir ;
             schema:name ?name ;
-            my:souvenirCategory "Clothing" .
+            schema:category "Clothing" .
 }
 
 # Query to select name and city of souvenirs bought by "Alice"
@@ -40,6 +42,8 @@ SELECT ?souvenir ?name ?city
 WHERE {
   ?souvenir a my:Souvenir ;
             schema:name ?name ;
-            my:buyerName "Alice" ;
-            my:boughtInCity ?city .
+            my:buyer ?buyerNode ;
+            my:boughtIn ?cityNode .
+  ?buyerNode schema:name "Alice" .
+  ?cityNode schema:name ?city .
 }

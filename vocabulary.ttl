@@ -15,26 +15,20 @@ my:Souvenir a rdfs:Class ;
     rdfs:subClassOf schema:CreativeWork .
 
 # Property Definitions
-my:boughtInCity a rdf:Property ;
-    rdfs:label "boughtInCity" ;
-    rdfs:comment "The city where the souvenir was purchased." ;
+my:boughtIn a rdf:Property ;
+    rdfs:label "boughtIn" ;
+    rdfs:comment "The city where the souvenir was obtained." ;
     rdfs:domain my:Souvenir ;
-    rdfs:range schema:Text .
+    rdfs:range schema:City .
 
-my:tripYear a rdf:Property ;
-    rdfs:label "tripYear" ;
-    rdfs:comment "The year the trip took place." ;
+my:tripDate a rdf:Property ;
+    rdfs:label "tripDate" ;
+    rdfs:comment "The date when the trip took place." ;
     rdfs:domain my:Souvenir ;
-    rdfs:range schema:Integer .
+    rdfs:range schema:Date .
 
-my:buyerName a rdf:Property ;
-    rdfs:label "buyerName" ;
-    rdfs:comment "The name of the person who bought the item." ;
+my:buyer a rdf:Property ;
+    rdfs:label "buyer" ;
+    rdfs:comment "The person who purchased the item." ;
     rdfs:domain my:Souvenir ;
-    rdfs:range schema:Text .
-
-my:souvenirCategory a rdf:Property ;
-    rdfs:label "souvenirCategory" ;
-    rdfs:comment "The type of object, e.g., Keychain, Clothing." ;
-    rdfs:domain my:Souvenir ;
-    rdfs:range schema:Text .
+    rdfs:range schema:Person .
