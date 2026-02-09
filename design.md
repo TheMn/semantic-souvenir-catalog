@@ -11,10 +11,12 @@
    *   **Custom Ontology (`my:`):** Created to handle specific travel context which Schema.org lacks.
        *   **Class:** `my:Souvenir` (Subclass of `schema:CreativeWork`).
        *   **Properties:**
-           *   `my:boughtInCity`: The name of the city where the souvenir was purchased.
-           *   `my:tripYear`: The year the trip took place.
-           *   `my:buyerName`: The name of the person who bought the item.
-           *   `my:souvenirCategory`: The type of object (e.g., Keychain, Clothing).
+           *   `my:boughtIn`: Object property pointing to `schema:City`. The city where the souvenir was obtained.
+           *   `my:tripDate`: The date the trip took place (`schema:Date`).
+           *   `my:buyer`: Object property pointing to `schema:Person`. The person who bought the item.
+
+   *   **Standard Properties:**
+       *   `schema:category`: Used to define the type of object (e.g., Keychain, Clothing).
 
 4. **Competency Questions:**
 
