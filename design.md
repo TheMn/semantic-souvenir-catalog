@@ -6,9 +6,10 @@
 
 3. **Ontology Selection:**
 
-   *   **Schema.org (`schema:Product`):** Used for base interoperability.
+   *   **Schema.org (`schema:CreativeWork`):** Selected as the parent class instead of schema:Product. This decision was made to correctly model souvenirs as cultural artifacts and crafted works rather than commercial merchandise.
+
    *   **Custom Ontology (`my:`):** Created to handle specific travel context which Schema.org lacks.
-       *   **Class:** `my:Souvenir` (Subclass of `schema:Product`).
+       *   **Class:** `my:Souvenir` (Subclass of `schema:CreativeWork`).
        *   **Properties:**
            *   `my:boughtInCity`: The name of the city where the souvenir was purchased.
            *   `my:tripYear`: The year the trip took place.
