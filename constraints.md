@@ -29,6 +29,8 @@
 * **New Properties:**
     * `my:boughtInCity` (Text: The name of the city where you bought it).
     * `my:tripYear` (Number: The year you visited).
+    * `my:buyerName` (Text: The name of the person who bought the item).
+    * `my:souvenirCategory` (Text: The type of object, e.g., Keychain, Clothing).
 
 ## 4. Content (The Items)
 1.  **Item 1:** Eiffel Tower Keychain (Paris)

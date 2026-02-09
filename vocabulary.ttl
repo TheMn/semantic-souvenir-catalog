@@ -26,3 +26,15 @@ my:tripYear a rdf:Property ;
     rdfs:comment "The year the trip took place." ;
     rdfs:domain my:Souvenir ;
     rdfs:range schema:Integer .
+
+my:buyerName a rdf:Property ;
+    rdfs:label "buyerName" ;
+    rdfs:comment "The name of the person who bought the item." ;
+    rdfs:domain my:Souvenir ;
+    rdfs:range schema:Text .
+
+my:souvenirCategory a rdf:Property ;
+    rdfs:label "souvenirCategory" ;
+    rdfs:comment "The type of object, e.g., Keychain, Clothing." ;
+    rdfs:domain my:Souvenir ;
+    rdfs:range schema:Text .
