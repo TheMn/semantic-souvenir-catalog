@@ -13,14 +13,15 @@ WHERE {
 # Query to select all souvenirs bought after 2020
 PREFIX schema: <http://schema.org/>
 PREFIX my: <https://themn.github.io/semantic-souvenir-catalog/vocabulary.ttl#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?souvenir ?name
+SELECT ?name ?date
 WHERE {
   ?souvenir a my:Souvenir ;
             schema:name ?name ;
             my:tripDate ?date .
-  FILTER (?date > "2020-12-31"^^xsd:date)
+            
+  # Simple string comparison (Works for ISO dates)
+  FILTER (STR(?date) > "2020-12-31")
 }
 
 # Query to select all souvenirs that are "Clothing"
